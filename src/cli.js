@@ -52,7 +52,9 @@ pptx2pdf({
   png: argv.png,
   removePdf: argv.removePdf,
   libreofficeBin: argv.libreofficeBin,
-  logDir: argv.logDir
+  logDir: argv.logDir,
+  resize: argv.resize,
+  density: argv.density,
 })
 .catch(err => {
   console.log(err);
