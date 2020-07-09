@@ -86,7 +86,7 @@ export default function pptx2pdf({ input, outputDir, filename, target, png, remo
   // const cmdPng = `${convert} -verbose -limit memory 0 -limit map 0 -resize 1200 -density 200 ${outputPath} ${outputPath.replace(/\.pdf$/, '')}.png`;
   const cmdPng = `${convert} -verbose -resize ${resize} -density ${density} ${outputPath} ${outputPath.replace(/\.pdf$/, '')}.png`;
   // const cmdPdf2Png = `${convert} -verbose -limit memory 0 -limit map 0 -resize 1200 -density 200 ${inputPath} ${outputDir}/${outputPng}`;
-  const cmdPdf2Png = `${convert} -background white -alpha off -flatten -verbose -resize ${resize} -density ${density} ${inputPath} ${outputDir}/${outputPng}`;
+  const cmdPdf2Png = `${convert} -background white -alpha off -verbose -resize ${resize} -density ${density} ${inputPath} ${outputDir}/${outputPng}`;
 
   return fs.access(inputPath)
     .then(() => checkInput(inputPath))
